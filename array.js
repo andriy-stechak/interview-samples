@@ -10,5 +10,19 @@ const f = (a, t) => {
  }
 }
 
-console.log(f(a, 14)); // [3, 5]
+const f2 = (a, t) => {
+  const remindersMap = a.reduce((acc, num, index) => {
+    acc.set(t - num, index);
+    return acc;
+  }, new Map());
+  for (let i = 0; i < a.length; i++) {
+    if(remindersMap.has(a[i])) {
+      return [i, remindersMap.get(a[i])];
+    }
+  }
+  return [];
+};
+
+console.log('f =>', f(a, 14));
+console.log('f2 =>', f2(a, 14));
 
