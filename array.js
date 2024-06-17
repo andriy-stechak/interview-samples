@@ -1,6 +1,17 @@
 const { strict: assert } = require('assert');
 
-const a = [6, 1, 10, 5, 7, 9, 3];
+const list = [6, 1, 10, 5, 7, 9, 3];
+
+whichElementsSum(list, 8) // [1, 4]
+
+/*
+  Create function implementation which accepts first argument as array of unique numbers and second as number.
+  The function finds first entrance and returns array with 2 indices which correspond to sum of 2 elements of array equal to second argument of function. 
+   
+   whichElementsSum (list: number[], sum: number): number[]
+*/
+
+  
 
 const f = (a, t) => {
  for(let i = 0; i < a.length - 1; i++) {
