@@ -7,7 +7,7 @@ const add2 = (...operands) => operands.reduce((acc, operand) => acc + operand, 0
 
 const o = {
   res: 0,
-  add3 (operand) {
+  add (operand) {
     this.res += operand;
     return this;
   },
@@ -16,7 +16,7 @@ const o = {
   }
 };
 
-const add3 = o.add3.bind(o);
+const add3 = o.add.bind(o);
 
 console.log(add(2)); // 2
 console.log(add(3)); // 5

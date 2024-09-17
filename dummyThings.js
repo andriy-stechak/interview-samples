@@ -3,7 +3,7 @@ for (const c of s) {
   console.log(c)
 }
 
-f()
+// f()
 var str = 'ssd'
 const f = () => {
   console.log(str)
