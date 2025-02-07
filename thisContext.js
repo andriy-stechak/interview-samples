@@ -3,7 +3,7 @@ const user = {
     return this._age || 25;
   },
   set age(v) {
-    this._age = (/\\d/g.test(String(v)) && v) || this._age;
+    this._age = /\d/g.test(String(v)) ? v : this._age;
   },
   getAge: function () { return this.age; },
   incrementAge: () => this.age++

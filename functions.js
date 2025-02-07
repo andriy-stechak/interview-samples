@@ -1,25 +1,28 @@
-// add();
-// subtruct();
-// var subtruct = function() {};
-// function add() {}
+global.name = 'George';
 
-const name = 'g'
-
-const o = {
-    name: 'Ser',
+const demo = {
+    name: 'Sergio',
     show: function() {
-        const name = 'Adm'
-        const self = this
+        const name = 'Adam';
+        const self = this;
 
-        console.log(this.name)
-        console.log(self.name)
+        console.log(this.name);
+        console.log(self.name);
+        console.log(name);
 
-        const s = function() {
-            console.info(this.name)
-            console.info(self.name)
-        }
-        s()
-    }
-}
+        (function () {
+            console.log(this.name);
+            console.log(self.name);
+            console.log(name);
+        })();
 
-o.show()
+        (() => {
+            console.log(arguments);
+            console.log(this.name);
+            console.log(self.name);
+            console.log(name);
+        })();
+    },
+};
+
+demo.show('one', 'two');

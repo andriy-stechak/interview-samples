@@ -1,8 +1,9 @@
+'use strict';
 const { strict: assert } = require('assert');
 
 const list = [6, 1, 10, 5, 7, 9, 3];
 
-whichElementsSum(list, 8) // [1, 4]
+// whichElementsSum(list, 8) // [1, 4]
 
 /*
   Create function implementation which accepts first argument as array of unique numbers and second as number.
@@ -50,7 +51,26 @@ const whichElementsSum2 = (a, number) => {
   return [num1Index, num2Index];
 };
 
-console.log('whichElementsSum =>', whichElementsSum(a, 14));
-console.log('whichElementsSum2 =>', whichElementsSum2(a, 14));
+console.log('whichElementsSum =>', whichElementsSum(list, 14));
+console.log('whichElementsSum2 =>', whichElementsSum2(list, 14));
 console.log('whichElementsSum =>', whichElementsSum([3,4,1,6,7], 5));
-console.log('f =>', f(a, 14));
+console.log('f =>', f(list, 14));
+
+const demo = {
+  numbers: [3,4,5,1,23],
+  max: 0,
+  prepare: function () {
+    this.numbers.forEach((e) => {
+      if (e > this.max) {
+        this.max = e;
+      }
+    });
+  },
+  show: function() {
+    (() => {
+      console.info('max:', this.max);
+    })();
+  }
+};
+demo.prepare();
+demo.show();
